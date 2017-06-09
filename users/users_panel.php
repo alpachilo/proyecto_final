@@ -57,12 +57,28 @@
 
 <div class="container-fluid text-center">
   <div class="row content">
+    <div class="col-xs-12">
+      <form action="cambiar_color.php" method="post">
+      <div class="form-group">
+        <select class="form-control" name="color">
+          <option value="1">Amarillo</option>
+            <option value="2">Azul</option>
+              <option value="3">Amarillo</option>
+                <option value="4">Verde</option>
+        </select>
+      </div>
+      <div class="form-group">
+          <button type="submit" name="action" value="cambiar_color" class="btn btn-success col-xs-12">Cambiar</button>
+        </div>
+      </form>
+    </div>
+
     <img src="../Imagenes/foto_panel2.jpg" class="img-responsive" style="margin: 0 auto;" alt="OK">
     <p>Este es tu <b>panel de usuario</b> en el que encontrarás tus cursos inscritos y los registros de tus salidas, si necesitas modificar algun registro comunicate con nosotros a través del formulario de contacto.</p>
     <div class="col-sm-12 text-left">
       <?php
         //CREATING THE CONNECTION
-        $connection = new mysqli("localhost", "id1003383_root", "123456", "id1003383_bajamar");
+        $connection = new mysqli("localhost", "root", "madeinsp1", "bajamar");
         $connection->set_charset("utf8");
 
         //TESTING IF THE CONNECTION WAS RIGHT
@@ -109,7 +125,7 @@
     <div class="col-sm-12 text-left">
       <?php
         //CREATING THE CONNECTION
-        $connection = new mysqli("localhost", "id1003383_root", "123456", "id1003383_bajamar");
+        $connection = new mysqli("localhost", "root", "madeinsp1", "bajamar");
         $connection->set_charset("utf8");
 
         //TESTING IF THE CONNECTION WAS RIGHT
